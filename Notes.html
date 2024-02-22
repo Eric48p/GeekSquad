@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Generator</title>
+    <link rel="stylesheet" href="Notes.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="logo.png" />
+      <h1 style="font-size: 25px">Note Generator</h1>
+      <h1 style="margin-right: 10px">Store: #1260</h1>
+    </nav>
+    <div class="form">
+      <form action="#" method="post">
+        <label for="service-disposition">Service Disposition:</label><br />
+        <input
+          type="radio"
+          id="in-store"
+          name="service-disposition"
+          value="in-store"
+        />
+        <label for="in-store">In-Store</label><br />
+        <input
+          type="radio"
+          id="out-of-store"
+          name="service-disposition"
+          value="out-of-store"
+        />
+        <label for="out-of-store">Out-of-Store</label><br /><br />
+
+        <label for="data-services">Data Services:</label><br />
+        <input type="radio" id="no-data" name="data-services" value="no-data" />
+        <label for="no-data">No Data</label><br />
+        <input type="radio" id="data" name="data-services" value="data" />
+        <label for="data">Data</label><br /><br />
+
+        <label for="description">Description of Issue:</label><br />
+        <textarea
+          id="description"
+          name="description"
+          rows="5"
+          cols="50"
+          placeholder="Client built a custom PC that does not boot, but the light do turn on. Has a Windows 11 product key. If there are any hardware issues, client would like to be contacted for potential replacement recommendations."
+          style="resize: none"
+        ></textarea
+        ><br /><br />
+
+        <label for="services-completed">Services to be Completed:</label><br />
+        <input
+          type="checkbox"
+          id="diagnostics"
+          name="services-completed"
+          value="diagnostics"
+        />
+        <label for="diagnostics">Diagnostics</label><br />
+        <input
+          type="checkbox"
+          id="os-install"
+          name="services-completed"
+          value="os-install"
+        />
+        <label for="os-install">OS Install</label><br />
+        <input
+          type="checkbox"
+          id="data-backup"
+          name="services-completed"
+          value="data-backup"
+        />
+        <label for="data-backup">Data Back Up</label><br />
+        <input
+          type="checkbox"
+          id="virus-scan"
+          name="services-completed"
+          value="virus-scan"
+        />
+        <label for="virus-scan">Virus Scan</label><br />
+        <input
+          type="checkbox"
+          id="software-install"
+          name="services-completed"
+          value="software-install"
+        />
+        <label for="software-install">Software Install</label><br />
+        <input
+          type="checkbox"
+          id="hardware-install"
+          name="services-completed"
+          value="hardware-install"
+        />
+        <label for="hardware-install">Hardware Install</label><br />
+        <input
+          type="checkbox"
+          id="device-setup"
+          name="services-completed"
+          value="device-setup"
+        />
+        <label for="device-setup">Device Setup</label><br />
+        <input
+          type="checkbox"
+          id="tuneup"
+          name="services-completed"
+          value="tuneup"
+        />
+        <label for="tuneup">Tune Up</label><br />
+        <!-- Add more checkbox options as needed -->
+
+        <br />
+
+        <label for="turn-time">Turn Time:</label><br />
+        <select id="turn-time" name="turn-time">
+          <option value="3-days">3 Days</option>
+          <option value="other">Other</option></select
+        ><br />
+        <input
+          type="text"
+          id="other-turn-time"
+          name="other-turn-time"
+          placeholder="Enter turn time if Other selected"
+        /><br /><br />
+
+        <label for="additional-information"
+          >Additional Information Repair Agents Might Need:</label
+        ><br />
+        <textarea
+          id="additional-information"
+          name="additional-information"
+          rows="5"
+          cols="50"
+          placeholder="Informed client if more time is needed, they will be contacted."
+          style="resize: none"
+        ></textarea
+        ><br /><br />
+
+        <input type="submit" value="Submit" />
+      </form>
+      <textarea class="copy-textbox">Hi</textarea>
+      <input type="button" value="Copy" class="copy-button" />
+    </div>
+    <footer>
+      <p>Created By: Eric Ponce</p>
+      <p>Version: 1.0</p>
+    </footer>
+  </body>
+</html>
