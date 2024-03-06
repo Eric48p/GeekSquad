@@ -13,31 +13,33 @@
       <h1 style="margin-right: 10px">Store: #1260</h1>
     </nav>
     <div class="form">
-        <div class="row">
+        <div class="row" style="margin-top: 20px;">
           <label for="service-disposition" class="label-title">Service Disposition <span style="color: red;">*</span></label>
-          <div class="row-selections">
+          <div class="row-selections" style="height: fit-content; align-items: center;">
             <input
               type="radio"
               id="in-store"
               name="service-disposition"
               value="in-store"
+              style="accent-color: black;"
             />
-            <label for="in-store">In-Store</label>
+            <label for="in-store" style="margin-right: 20px;">In-Store</label>
             <input
               type="radio"
               id="out-of-store"
               name="service-disposition"
               value="out-of-store"
+              style="accent-color: black;"
             />
             <label for="out-of-store">Out-of-Store</label>
           </div>
         </div>
         <div class="row">
           <label for="data-services" class="label-title">Data Services <span style="color: red;">*</span></label>
-          <div class="row-selections">
-            <input type="radio" id="no-data" name="data-services" value="no-data" />
-            <label for="no-data">No Data</label>
-            <input type="radio" id="data" name="data-services" value="data" />
+          <div class="row-selections" style="height: fit-content; align-items: center;">
+            <input type="radio" id="no-data" name="data-services" value="no-data" style="accent-color: black;"/>
+            <label for="no-data" style="margin-right: 20px;">No Data</label>
+            <input type="radio" id="data" name="data-services" value="data" style="accent-color: black;"/>
             <label for="data">Data</label>
           </div>
         </div>
@@ -47,8 +49,7 @@
             <textarea
               id="description"
               name="description"
-              rows="5"
-              cols="50"
+              
               placeholder="Client built a custom PC that does not boot, but the lights do turn on. Has a Windows 11 product key. If there are any hardware issues, client would like to be contacted for potential replacement recommendations."
               style="resize: none"
             ></textarea>
@@ -79,6 +80,8 @@
                 value="data-backup"
               />
               <label for="data-backup">Data Back Up</label>
+            </div>
+            <div class="row-selections-services-child">
               <input
                 type="checkbox"
                 id="virus-scan"
@@ -93,8 +96,6 @@
                 value="software-install"
               />
               <label for="software-install">Software Install</label>
-            </div>
-            <div class="row-selections-services-child">
               <input
               type="checkbox"
               id="hardware-install"
@@ -102,6 +103,8 @@
               value="hardware-install"
               />
               <label for="hardware-install">Hardware Install</label>
+            </div>
+            <div class="row-selections-services-child">
               <input
                 type="checkbox"
                 id="device-setup"
@@ -129,21 +132,22 @@
           </div>
         </div>
         <div class="row">
-          <label for="additional-information" class="label-title">Additional Information Repair <br/> Agents Might Need <span style="color: red;">*</span></label>
+          <label for="additional-information" class="label-title">Additional Info ARA Might Need <span style="color: red;">*</span></label>
           <div class="row-selections">
             <textarea
               id="additional-information"
               name="additional-information"
-              rows="5"
-              cols="50"
+              
               placeholder="Informed client if more time is needed, they will be contacted."
               style="resize: none"
             ></textarea>
           </div>
         </div>
+
         <div class="row" style="display: flex; justify-content: center;">
-          <input type="button" value="Submit"/>
+          <input type="button" value="Submit" class="submit-button"/>
         </div>
+
         <div class="output-row">
           <textarea class="copy-textbox">Hi</textarea>
           <input type="button" value="Copy" class="copy-button" />
