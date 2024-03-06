@@ -1,7 +1,7 @@
 body {
   display: flex;
   margin: 0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
   flex-direction: column;
   align-items: center;
   background-color: #f47624;
@@ -26,134 +26,138 @@ nav h1 {
   font-size: 20px;
 }
 
-/* Notes Form Styling */
+/* Notes Form Styling  =====================================*/
 .form {
   display: flex;
   background-color: white;
   width: 50%;
+  min-height: 90vh;
   height: fit-content;
   flex-direction: column;
   box-shadow: 0px 0px 25px black;
   gap: 5px;
 }
-.row{
+.row {
   display: flex;
   width: 100%;
   height: fit-content;
-  min-height: 100px;
+  min-height: 60px;
   /* background-color: blue; */
 }
-.label-title{
+.label-title {
   /* background-color: yellow; */
   min-width: 200px;
   max-width: 200px;
   margin-left: 20px;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: bold;
 }
-.row-selections{
+.row-selections {
   display: flex;
   width: 100%;
   /* background-color: green; */
   margin-left: 150px;
 }
-.row-selections label{
+.row-selections label {
   color: #f47624;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
   margin-left: 5px;
 }
-.row-selections-services{
+.row-selections-services {
   display: flex;
   width: fit-content;
-  height: 100%;
+  height: fit-content;
   /* background-color: green; */
   flex-direction: column;
   margin-left: 150px;
   gap: 5px;
 }
-.row-selections-services-child{
+.row-selections-services-child {
   display: flex;
   width: 100%;
   height: 100%;
   align-items: center;
 }
-.row-selections-services-child input{
+.row-selections-services-child input {
   accent-color: black;
 }
-.row-selections-services-child label{
+.row-selections-services-child label {
   color: #f47624;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
   margin-left: 5px;
   margin-right: 20px;
 }
-.row-selections select{
-  height: 30px;
-  width: 100px;
-  color: #f47624;
-  border: 1px solid black;
-  font-weight: bold;
-}
 
-.row-selections textarea{
+.row-selections textarea {
   display: flex;
-  border: none;
-  border-bottom: 1px solid grey;
+  /* border: none; */
+  /* border-bottom: 1px solid grey; */
   width: 90%;
-  min-height: 50px;
+  min-height: 70px;
   height: fit-content;
 }
+.row-selections textarea:focus {
+  outline: 2px solid #f47624;
+  border: 0;
+}
+.row-selections textarea::placeholder {
+  position: absolute;
+  bottom: 10px;
+}
+.custom-turn-time:focus {
+  outline: none;
+}
 /* Submit Button ======================================== */
-.submit-button{
+.submit-button {
   background-color: black;
   color: white;
   height: 35px;
   width: 75px;
   border-radius: 10px;
   border: solid 1px white;
-  margin: 5px 0 5px 0;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   align-self: center;
 }
-.submit-button:hover{
-  height: 38px;
+.submit-button:hover {
+  height: 37px;
   cursor: pointer;
 }
 
-.output-row{
+/* Output Field ========================================= */
+.output-row {
   display: flex;
   width: 100%;
   height: fit-content;
-  background-color: blue;
+  /* background-color: blue; */
   flex-direction: column;
 }
 .copy-textbox {
-  width: 400px;
-  min-height: 150px;
+  width: 500px;
+  min-height: 125px;
+  border: 1px solid grey;
   height: fit-content;
   align-self: center;
   resize: none;
+  cursor: default;
+}
+.copy-textbox:focus {
+  outline: none;
 }
 .copy-button {
   background-color: black;
   color: white;
   width: 75px;
-  height: 25px;
+  height: 35px;
   border-radius: 10px;
   border: solid 1px white;
-  margin: 5px 0 5px 0;
-  font-size: 15px;
+  margin: 15px 0 0 0;
+  font-size: 14px;
   font-weight: bold;
-  transition: 0.5s;
   align-self: center;
 }
-.notes input:hover {
-  transition: 0.5s;
-  background-color: #f47624;
-  color: black;
-  border: solid 1px black;
+.copy-button:hover {
+  height: 37px;
   cursor: pointer;
 }
 /* Footer Styling */
@@ -167,7 +171,6 @@ footer {
   justify-content: end;
   flex-direction: column;
   box-shadow: 0px 15px 25px black;
-
 }
 footer p {
   margin: 0 5px 3px 0;

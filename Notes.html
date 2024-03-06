@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Note Generator</title>
     <link rel="stylesheet" href="Notes.css" />
+    <script src="Notes.js"></script>
   </head>
   <body>
     <nav>
@@ -13,149 +14,224 @@
       <h1 style="margin-right: 10px">Store: #1260</h1>
     </nav>
     <div class="form">
-        <div class="row" style="margin-top: 20px;">
-          <label for="service-disposition" class="label-title">Service Disposition <span style="color: red;">*</span></label>
-          <div class="row-selections" style="height: fit-content; align-items: center;">
+      <!-- Service Disposition ============================================ -->
+      <div class="row" style="margin-top: 20px">
+        <label for="service-disposition" class="label-title"
+          >Service Disposition <span style="color: red">*</span></label
+        >
+        <div
+          class="row-selections"
+          style="height: fit-content; align-items: center"
+        >
+          <input
+            type="radio"
+            id="in-store"
+            name="service-disposition"
+            value="INSTORE"
+            style="accent-color: black"
+          />
+          <label for="in-store" style="margin-right: 20px">In-Store</label>
+          <input
+            type="radio"
+            id="out-of-store"
+            name="service-disposition"
+            value="OUT OF STORE"
+            style="accent-color: black"
+          />
+          <label for="out-of-store">Out-of-Store</label>
+        </div>
+      </div>
+      <!-- Data Services ========================================================== -->
+      <div class="row">
+        <label for="data-services" class="label-title"
+          >Data Services <span style="color: red">*</span></label
+        >
+        <div
+          class="row-selections"
+          style="height: fit-content; align-items: center"
+        >
+          <input
+            type="radio"
+            id="data"
+            name="data-services"
+            value="DATA"
+            style="accent-color: black"
+          />
+          <label for="data" style="margin-right: 20px">Data</label>
+          <input
+            type="radio"
+            id="no-data"
+            name="data-services"
+            value="NO DATA"
+            style="accent-color: black"
+          />
+          <label for="no-data">No Data</label>
+        </div>
+      </div>
+      <!-- Description of Issue ========================================================== -->
+      <div class="row" style="height: 100px">
+        <label for="description" class="label-title"
+          >Description of Issue <span style="color: red">*</span></label
+        >
+        <div class="row-selections">
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Client built a custom PC that does not boot. If there are any hardware issues, client would like to be contacted for potential replacement recommendations."
+            style="resize: none"
+          ></textarea>
+        </div>
+      </div>
+      <!-- Services to be Completed ====================================================== -->
+      <div class="row" style="height: 110px">
+        <label for="services-completed" class="label-title"
+          >Services to be Completed <span style="color: red">*</span></label
+        >
+        <div class="row-selections-services">
+          <div class="row-selections-services-child">
             <input
-              type="radio"
-              id="in-store"
-              name="service-disposition"
-              value="in-store"
-              style="accent-color: black;"
-            />
-            <label for="in-store" style="margin-right: 20px;">In-Store</label>
-            <input
-              type="radio"
-              id="out-of-store"
-              name="service-disposition"
-              value="out-of-store"
-              style="accent-color: black;"
-            />
-            <label for="out-of-store">Out-of-Store</label>
-          </div>
-        </div>
-        <div class="row">
-          <label for="data-services" class="label-title">Data Services <span style="color: red;">*</span></label>
-          <div class="row-selections" style="height: fit-content; align-items: center;">
-            <input type="radio" id="no-data" name="data-services" value="no-data" style="accent-color: black;"/>
-            <label for="no-data" style="margin-right: 20px;">No Data</label>
-            <input type="radio" id="data" name="data-services" value="data" style="accent-color: black;"/>
-            <label for="data">Data</label>
-          </div>
-        </div>
-        <div class="row">
-          <label for="description" class="label-title">Description of Issue <span style="color: red;">*</span></label>
-          <div class="row-selections">
-            <textarea
-              id="description"
-              name="description"
-              
-              placeholder="Client built a custom PC that does not boot, but the lights do turn on. Has a Windows 11 product key. If there are any hardware issues, client would like to be contacted for potential replacement recommendations."
-              style="resize: none"
-            ></textarea>
-          </div>
-        </div>
-        <div class="row">
-          <label for="services-completed" class="label-title">Services to be Completed <span style="color: red;">*</span></label>
-          <div class="row-selections-services">
-            <div class="row-selections-services-child">
-              <input
               type="checkbox"
               id="diagnostics"
               name="services-completed"
-              value="diagnostics"
-              />
-              <label for="diagnostics">Diagnostics</label>
-              <input
-                type="checkbox"
-                id="os-install"
-                name="services-completed"
-                value="os-install"
-              />
-              <label for="os-install">OS Install</label>
-              <input
-                type="checkbox"
-                id="data-backup"
-                name="services-completed"
-                value="data-backup"
-              />
-              <label for="data-backup">Data Back Up</label>
-            </div>
-            <div class="row-selections-services-child">
-              <input
-                type="checkbox"
-                id="virus-scan"
-                name="services-completed"
-                value="virus-scan"
-              />
-              <label for="virus-scan">Virus Scan</label>
-              <input
-                type="checkbox"
-                id="software-install"
-                name="services-completed"
-                value="software-install"
-              />
-              <label for="software-install">Software Install</label>
-              <input
+              value="Diagnostics"
+            />
+            <label for="diagnostics">Diagnostics</label>
+            <input
+              type="checkbox"
+              id="os-install"
+              name="services-completed"
+              value="OS Install"
+            />
+            <label for="os-install">OS Install</label>
+            <input
+              type="checkbox"
+              id="data-backup"
+              name="services-completed"
+              value="Data BackUp"
+            />
+            <label for="data-backup">Data Back Up</label>
+          </div>
+          <div class="row-selections-services-child">
+            <input
+              type="checkbox"
+              id="virus-scan"
+              name="services-completed"
+              value="Virus Scan"
+            />
+            <label for="virus-scan">Virus Scan</label>
+            <input
+              type="checkbox"
+              id="software-install"
+              name="services-completed"
+              value="Software Install"
+            />
+            <label for="software-install">Software Install</label>
+            <input
               type="checkbox"
               id="hardware-install"
               name="services-completed"
-              value="hardware-install"
-              />
-              <label for="hardware-install">Hardware Install</label>
-            </div>
-            <div class="row-selections-services-child">
-              <input
-                type="checkbox"
-                id="device-setup"
-                name="services-completed"
-                value="device-setup"
-              />
-              <label for="device-setup">Device Setup</label>
-              <input
-                type="checkbox"
-                id="tuneup"
-                name="services-completed"
-                value="tuneup"
-              />
-              <label for="tuneup">Tune Up</label>
-            </div>
+              value="Hardware Install"
+            />
+            <label for="hardware-install">Hardware Install</label>
+          </div>
+          <div class="row-selections-services-child">
+            <input
+              type="checkbox"
+              id="device-setup"
+              name="services-completed"
+              value="Device Setup"
+            />
+            <label for="device-setup">Device Setup</label>
+            <input
+              type="checkbox"
+              id="tuneup"
+              name="services-completed"
+              value="TuneUp"
+            />
+            <label for="tuneup">Tune Up</label>
           </div>
         </div>
-        <div class="row">
-          <label for="turn-time" class="label-title">Turn Time <span style="color: red;">*</span></label>
-          <div class="row-selections">
-            <select id="turn-time" name="turn-time">
-              <option value="3-days">3 Days</option>
-              <option value="other">Other</option></select
-            >
-          </div>
+      </div>
+      <!-- Turn Time =============================================================== -->
+      <div class="row">
+        <label for="turn-time" class="label-title"
+          >Turn Time <span style="color: red">*</span></label
+        >
+        <div
+          class="row-selections"
+          style="height: fit-content; align-items: center"
+        >
+          <input
+            type="radio"
+            id="3-days"
+            name="turn-time"
+            value="3 Days"
+            style="accent-color: black"
+          />
+          <label for="3-days" style="margin-right: 20px">3 Days</label>
+          <input
+            type="radio"
+            id="other"
+            name="turn-time"
+            value="other"
+            style="accent-color: black"
+          />
+          <label for="other">Other</label>
         </div>
-        <div class="row">
-          <label for="additional-information" class="label-title">Additional Info ARA Might Need <span style="color: red;">*</span></label>
-          <div class="row-selections">
-            <textarea
-              id="additional-information"
-              name="additional-information"
-              
-              placeholder="Informed client if more time is needed, they will be contacted."
-              style="resize: none"
-            ></textarea>
-          </div>
+      </div>
+      <!-- Custom Turn Time Input -->
+      <div class="row" id="custom-turn-time-input" style="display: none">
+        <label
+          for="custom-turn-time"
+          class="label-title"
+          style="margin-right: 175px;"
+          >Custom Turn Time:</label
+        >
+        <input
+          type="text"
+          id="custom-turn-time"
+          class="custom-turn-time"
+          name="custom-turn-time"
+          style="border: none; border-bottom: 1px solid grey"
+        />
+      </div>
+      <!-- Addional Info =========================================================== -->
+      <div class="row" style="height: 100px">
+        <label for="additional-information" class="label-title"
+          >Additional Info ARA Might Need</label
+        >
+        <div class="row-selections">
+          <textarea
+            id="additional-information"
+            name="additional-information"
+            placeholder="Informed client if more time is needed, they will be contacted."
+            style="resize: none"
+          ></textarea>
         </div>
+      </div>
+      <!-- Output Field ================================================== -->
+      <div class="row" style="display: flex; justify-content: center">
+        <input
+          type="button"
+          value="Generate"
+          class="submit-button"
+          onclick="generate_notes()"
+        />
+      </div>
 
-        <div class="row" style="display: flex; justify-content: center;">
-          <input type="button" value="Submit" class="submit-button"/>
-        </div>
-
-        <div class="output-row">
-          <textarea class="copy-textbox">Hi</textarea>
-          <input type="button" value="Copy" class="copy-button" />
-        </div>
+      <div class="output-row">
+        <textarea class="copy-textbox" id="copy-textbox"></textarea>
+        <input
+          type="button"
+          value="Copy"
+          class="copy-button"
+          onclick="copyToClipboard()"
+        />
+      </div>
     </div>
     <footer>
-      <p>Created By: Eric Ponce</p>
       <p>Version: 1.0</p>
+      <p>Created By: Eric Ponce</p>
     </footer>
   </body>
 </html>
