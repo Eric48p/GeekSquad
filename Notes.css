@@ -100,10 +100,6 @@ nav h1 {
   outline: 2px solid #f47624;
   border: 0;
 }
-.row-selections textarea::placeholder {
-  position: absolute;
-  bottom: 10px;
-}
 .custom-turn-time:focus {
   outline: none;
 }
