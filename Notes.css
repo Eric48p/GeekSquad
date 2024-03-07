@@ -88,7 +88,7 @@ nav h1 {
   margin-right: 20px;
 }
 
-.row-selections textarea {
+.textbox {
   display: flex;
   /* border: none; */
   /* border-bottom: 1px solid grey; */
@@ -96,12 +96,21 @@ nav h1 {
   min-height: 70px;
   height: fit-content;
 }
-.row-selections textarea:focus {
+.textbox:focus {
   outline: 2px solid #f47624;
   border: 0;
 }
 .custom-turn-time:focus {
   outline: none;
+}
+.initials-textbox {
+  width: 100px;
+  height: 20px;
+  font-size: 15px;
+}
+.initials-textbox:focus {
+  outline: 2px solid #f47624;
+  border: 0;
 }
 /* Submit Button ======================================== */
 .submit-button {

@@ -2,6 +2,7 @@ function generate_notes() {
   const service_disposition = document.querySelector('input[name="service-disposition"]:checked').value;
   const data_services = document.querySelector('input[name="data-services"]:checked').value;
   const description_of_issue = document.getElementById("description").value;
+  const initials = document.getElementById("initials").value;
 
   let services_to_be_completed = "";
   document.getElementsByName('services-completed').forEach(box => {
@@ -22,7 +23,8 @@ function generate_notes() {
   const additional_info = document.getElementById("additional-information").value;
 
   // Concatenate all information into a single string
-  const generatedNotes = `${service_disposition} / ${data_services} / 1. ${description_of_issue} / 2. ${services_to_be_completed} / 3. ${turn_time}. ${additional_info}`;
+  const generatedNotes = `${service_disposition} / ${data_services} / 1. ${description_of_issue} / 2. ${services_to_be_completed} / 3. ${turn_time}. ${additional_info} [${initials}]`;
+
 
   // Set the generated notes as the value of the textarea
   document.querySelector('.copy-textbox').value = generatedNotes;
